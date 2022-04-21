@@ -1,0 +1,54 @@
+string name = "" ;
+string gender ="";
+string birth ="";
+string studentID ="";
+string change = "e" ;
+int finish = 1 ;
+
+do
+{
+    if ( change == "a" || change == "e"){
+        Console.Write("請輸入 姓名:");
+        name = Console.ReadLine();
+    }
+    if ( change == "b"  || change == "e") {
+        Console.Write("請輸入 性別(男/女):");
+        gender = Console.ReadLine();
+    }
+    if ( change == "c"  || change == "e"){
+        Console.Write("請輸入 出生年月日(e.g.20030326):");
+        birth = Console.ReadLine();        
+    }
+    if ( change == "d"  || change == "e"){
+        Console.Write("請輸入 學號:");
+        studentID = Console.ReadLine();    
+    }
+
+    Console.WriteLine(" ");
+    Console.WriteLine("姓名 : " + name );
+    Console.WriteLine("性別 : " + gender );
+    Console.WriteLine("出生年月日 : " + birth );
+    Console.WriteLine("學號 : " + studentID );
+    Console.WriteLine("以上資料正確請輸入「1」; 重新填寫請輸入「2」; 資料正確且不再填寫請輸入「3」");
+    change = Console.ReadLine();
+
+    if ( change == "1" )
+    {
+        Console.WriteLine("已完成資料建置");
+        Console.WriteLine("");
+        change = "e" ;
+    }
+    else if (change == "2" )
+    {
+        Console.WriteLine("");
+        Console.WriteLine("重新填寫");
+        Console.WriteLine("請輸入欲重新填寫項目之代號 (a)姓名 (b)性別 (c)出生年月日 (d)學號 ");
+        change = Console.ReadLine();
+    }
+    else
+    {
+        Console.WriteLine("已完成資料建置");  
+        Console.WriteLine("");             
+        finish = 2 ;
+    }
+} while ( finish == 1 );
